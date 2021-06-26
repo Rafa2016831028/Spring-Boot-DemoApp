@@ -28,18 +28,19 @@ public class ItemService {
     }
 
     void updateItemInList(Item item, String id){
-        System.out.println(item+id);
+//        System.out.println(item+id);
         for(int i=0 ; i<itemList.size() ; i++) {
             if(itemList.get(i).getItemId().equals(id)){
                 itemList.set(i, item);
-                System.out.println(itemList.get(i));
+//                System.out.println(itemList.get(i));
                 return;
             }
         }
     }
 
+
     void deleteItemInList(String id){
-        System.out.println(id);
+        itemList.removeIf(t -> t.getItemId().equals(id));
     }
 }
 

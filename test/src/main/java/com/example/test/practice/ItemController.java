@@ -26,7 +26,7 @@ public class ItemController {
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/items/{id}")
-    public void updateItem(@RequestBody Item item,@PathVariable String id){
+    public void updateItem(@RequestBody Item item, @PathVariable String id){
         itemService.updateItemInList(item,id);
     }
 
