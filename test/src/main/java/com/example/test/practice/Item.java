@@ -1,5 +1,8 @@
 package com.example.test.practice;
 
+import javax.persistence.Entity;
+
+//@Entity
 public class Item {
     private String name;
     private String itemId;
