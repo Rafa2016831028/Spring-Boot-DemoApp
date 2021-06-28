@@ -1,12 +1,16 @@
 package com.example.test.practice;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-//@Entity
+@Entity
 public class Item {
     private String name;
-    private String itemId;
+    private @Id @GeneratedValue String itemId;
     private int price;
+
+    public Item () {}
 
     public Item(String name, String itemId, int price) {
         this.name = name;
