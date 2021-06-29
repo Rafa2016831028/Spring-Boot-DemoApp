@@ -26,4 +26,15 @@ public class EmployeeController {
     Employee newEmployee(@RequestBody Employee employee) {
         return repositary.save(employee);
     }
+
+    @PutMapping("/employees/{id}")
+    Employee updateEmployee(@PathVariable Long id, @RequestBody Employee newEmployee){
+        return repositary.findById(id).map(employee -> {
+            employee.setName(newEmployee.getName());
+            employee.setSalary(newEmployee.getSalary());
+            return repositary.save(employee);
+        }).orElseGet(() -> {newEmployee.setEmployeeId(id);
+        return repositary.save(newEmployee);
+        });
+    }
 }

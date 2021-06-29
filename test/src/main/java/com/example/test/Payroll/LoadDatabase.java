@@ -12,10 +12,6 @@ public class LoadDatabase {
 
     @Bean
     CommandLineRunner initialDatabase(EmployeeRepositary repositary){
-//        repositary.save(new Employee("Jarin",40000));
-//        repositary.save(new Employee("Nihal",75000));
-//        repositary.save(new Employee("Lucky",50000));
-//        return repositary;
         return args -> {
             log.info("Preloading " + repositary.save(new Employee("Jarin",40000)));
             log.info("Preloading " + repositary.save(new Employee("Nihal",75000)));

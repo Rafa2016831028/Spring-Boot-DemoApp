@@ -12,7 +12,7 @@ This is the project that i develpped while learning Spring Boot Framework.
 8. Maven (a build tool)
 
 # Spring Boot 
-1. IoC/DI engine
+1. IoC (Inversion of Control)/DI (Dependency Injection) engine
 <br /> Exposing beans to the context using @Bean, @Component in Spring Boot
 <br /> Auto wiring
 2. Working with JDBC
